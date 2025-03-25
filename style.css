@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1, #fad0c4);
+    background-size: 400% 400%;
+    animation: glowingBackground 6s ease infinite;
+    text-align: center;
+    padding: 50px;
+}
+
+@keyframes glowingBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: auto;
+}
+
+@keyframes blinkLight {
+    0% { text-shadow: 0 0 10px #ff4081, 0 0 20px #ff4081; }
+    50% { text-shadow: 0 0 20px #ff4081, 0 0 30px #ff4081; }
+    100% { text-shadow: 0 0 10px #ff4081, 0 0 20px #ff4081; }
+}
+
+h1 {
+    color: #ff4081;
+    animation: blinkLight 1.5s infinite alternate;
+    text-align: left;
+    margin-left: 20px;
+}
+
+button {
+    background: #ff4081;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #e91e63;
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #4caf50;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.show {
+    opacity: 1 !important;
+    transform: scale(1) !important;
+}
+
+/* Responsive Design for Mobile View */
+@media (max-width: 600px) {
+    body {
+        padding: 20px;
+    }
+    .container {
+        max-width: 90%;
+        padding: 20px;
+    }
+    h1 {
+        font-size: 20px;
+        text-align: center;
+        margin-left: 0;
+    }
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+    #message {
+        font-size: 16px;
+    }
+}
