@@ -13,6 +13,9 @@ body {
     100% { background-position: 0% 50%; }
 }
 
+img{
+    margin-left: 10px;
+}
 .container {
     background: white;
     padding: 30px;
